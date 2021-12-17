@@ -13,6 +13,10 @@ keys := [confirm, cycleDownThroughPartyList, cycleUpThroughPartyList, targetCurs
 Numpad1::
     SoundBeep, 200, 70 ; Comment out if you don't want to hear the noise indicator
     Input, num, L1
+    if (num > 3 or num < 1)
+    {
+        Return
+    }
     Instance(num, keys)
     Return
 
